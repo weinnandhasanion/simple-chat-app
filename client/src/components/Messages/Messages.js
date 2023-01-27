@@ -1,7 +1,7 @@
 import { useRouteGuard } from "../../hooks/useRouteGuard";
 
-export const Home = () => {
+export const Messages = () => {
   useRouteGuard();
 
-  return <div></div>;
+  return <>messages</>;
 };

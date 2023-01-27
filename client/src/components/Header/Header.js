@@ -22,7 +22,7 @@ export const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color="transparent">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Simple Chat App
@@ -38,7 +38,7 @@ export const Header = () => {
           ))}
 
           {loggedIn && (
-            <Button color="secondary" variant="contained" onClick={logout}>
+            <Button color="error" variant="text" onClick={logout}>
               Logout
             </Button>
           )}

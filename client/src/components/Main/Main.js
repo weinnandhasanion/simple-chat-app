@@ -3,6 +3,7 @@ import { ROUTES } from "../../utils/constants";
 import { Header } from "../Header";
 import { Home } from "../Home";
 import { Login } from "../Login";
+import { Messages } from "../Messages";
 import { Register } from "../Register";
 
 export const Main = () => {
@@ -13,7 +14,7 @@ export const Main = () => {
         <Route path={ROUTES.HOME} exact element={<Home />} />
         <Route path={ROUTES.LOGIN} exact element={<Login />} />
         <Route path={ROUTES.REGISTER} exact element={<Register />} />
-        <Route path={ROUTES.MESSAGES} exact element={<></>} />
+        <Route path={ROUTES.MESSAGES} exact element={<Messages />} />
       </Routes>
     </Router>
   );

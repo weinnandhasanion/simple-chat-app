@@ -1,18 +1,11 @@
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useStore } from "../../hooks/useStore";
-import { ROUTES } from "../../utils/constants";
+import { useState } from "react";
+import { useRouteGuard } from "../../hooks/useRouteGuard";
 
 export const Login = () => {
-  const { loggedIn } = useStore((state) => ({ loggedIn: state.loggedIn }));
-  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  useEffect(() => {
-    if (loggedIn) navigate(ROUTES.HOME);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  useRouteGuard();
 
   return (
     <Container maxWidth="sm">

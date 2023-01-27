@@ -41,7 +41,6 @@ export const Register = () => {
     name: "",
     email: "",
   });
-
   useRouteGuard();
 
   const handleFormChange = (e) =>
