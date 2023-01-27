@@ -1,14 +1,11 @@
+import { useSocket } from "./hooks/useSocket";
+import { Main } from "./components/Main";
 import "./App.css";
-import io from "socket.io-client";
 
 function App() {
-  const connect = () => {
-    const socket = io("http://localhost:8080", { transports: ["websocket"] });
+  useSocket();
 
-    socket.on("connect", () => console.log("connected socket"));
-  };
-
-  return <button onClick={connect}>Connect to socket</button>;
+  return <Main />;
 }
 
 export default App;
